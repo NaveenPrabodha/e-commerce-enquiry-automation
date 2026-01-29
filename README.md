@@ -55,20 +55,6 @@ Items: 2× Blue Shirt, 1× Chinos
 
 ---
 
-## 💰 Cost Overview
-
-| Component | Estimated Cost |
-|--------|---------------|
-| Development | LKR 80,000 – 100,000 (one-time) |
-| Cloud Run Deployment | LKR 0 (within free tier for low/moderate usage) |
-| WhatsApp API | Minimal / Near zero (admin-only alerts) |
-
-> WhatsApp Cloud API access is free.  
-> Charges apply only to outbound messages.  
-> Since this system sends one admin notification per order, costs are typically minimal.
-
----
-
 ## 📋 Requirements
 
 - Meta Business Manager account  
@@ -88,41 +74,36 @@ PHONE_NUMBER_ID=your_phone_number_id
 ADMIN_PHONE=admin_phone_number_with_country_code
 VERIFY_TOKEN=your_webhook_verify_token
 
-▶️ Run Locally
+## ▶️ Run Locally
+
+```bash
 pip install -r requirements.txt
 uvicorn main:app --reload
 
-☁️ Deployment (Google Cloud Run)
+## ☁️ Deployment (Google Cloud Run)
 
-Build Docker image
+1. Build the Docker image  
+2. Deploy the image to Google Cloud Run  
+3. Configure required environment variables  
+4. Set the webhook URL in your e-commerce platform  
 
-Deploy to Google Cloud Run
+---
 
-Configure environment variables
+## 🔮 Future Enhancements
 
-Set webhook URL in your e-commerce platform
+- Multiple admin routing  
+- Priority alerts for high-value orders  
+- Order status notifications  
+- Analytics dashboard  
+- Multi-channel alerts (Slack, Email)  
 
-🔮 Future Enhancements
+---
 
-Multiple admin routing
+## 📌 Use Cases
 
-Priority alerts for high-value orders
-
-Order status notifications
-
-Analytics dashboard
-
-Multi-channel alerts (Slack, Email)
-
-📌 Use Cases
-
-E-commerce stores
-
-Restaurants & delivery services
-
-Dropshipping businesses
-
-Small & medium online retailers
-
+- E-commerce stores  
+- Restaurants & delivery services  
+- Dropshipping businesses  
+- Small & medium online retailers  
 
 
