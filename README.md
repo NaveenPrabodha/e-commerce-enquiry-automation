@@ -70,17 +70,17 @@ Create a `.env` file:
 
 `.env`
 
-WHATSAPP_TOKEN=your_whatsapp_cloud_api_token
-PHONE_NUMBER_ID=your_phone_number_id
-ADMIN_PHONE=admin_phone_number_with_country_code
-VERIFY_TOKEN=your_webhook_verify_token
+- WHATSAPP_TOKEN=your_whatsapp_cloud_api_token
+- PHONE_NUMBER_ID=your_phone_number_id
+- ADMIN_PHONE=admin_phone_number_with_country_code
+- VERIFY_TOKEN=your_webhook_verify_token
 
 ## ▶️ Run Locally
 
 `bash`
 
-pip install -r requirements.txt
-uvicorn main:app --reload
+- pip install -r requirements.txt
+- uvicorn main:app --reload
 
 ## ☁️ Deployment (Google Cloud Run)
 
