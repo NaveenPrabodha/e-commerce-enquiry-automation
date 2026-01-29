@@ -28,3 +28,101 @@ This project focuses on **operational efficiency**, ensuring admins never miss a
 
 ## 📲 Sample WhatsApp Alert
 
+📦 New Order Received!
+Order ID: #1245
+Amount: LKR 15,000
+Customer: Kamal Perera
+Items: 2× Blue Shirt, 1× Chinos
+
+
+---
+
+## 🏗️ Tech Stack
+
+- **Backend:** Python, FastAPI  
+- **Messaging:** WhatsApp Cloud API (Meta)  
+- **Deployment:** Google Cloud Run  
+- **Integration:** Webhooks (E-commerce platform)
+
+---
+
+## 🔐 Architecture Highlights
+
+- External processing (no website slowdown)
+- Secure webhook validation
+- Internal/admin-only messaging
+- Designed for reliability and scalability
+
+---
+
+## 💰 Cost Overview
+
+| Component | Estimated Cost |
+|--------|---------------|
+| Development | LKR 80,000 – 100,000 (one-time) |
+| Cloud Run Deployment | LKR 0 (within free tier for low/moderate usage) |
+| WhatsApp API | Minimal / Near zero (admin-only alerts) |
+
+> WhatsApp Cloud API access is free.  
+> Charges apply only to outbound messages.  
+> Since this system sends one admin notification per order, costs are typically minimal.
+
+---
+
+## 📋 Requirements
+
+- Meta Business Manager account  
+- WhatsApp Cloud API access  
+- Admin phone number(s)  
+- Google Cloud account  
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file:
+
+```env
+WHATSAPP_TOKEN=your_whatsapp_cloud_api_token
+PHONE_NUMBER_ID=your_phone_number_id
+ADMIN_PHONE=admin_phone_number_with_country_code
+VERIFY_TOKEN=your_webhook_verify_token
+
+▶️ Run Locally
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+☁️ Deployment (Google Cloud Run)
+
+Build Docker image
+
+Deploy to Google Cloud Run
+
+Configure environment variables
+
+Set webhook URL in your e-commerce platform
+
+🔮 Future Enhancements
+
+Multiple admin routing
+
+Priority alerts for high-value orders
+
+Order status notifications
+
+Analytics dashboard
+
+Multi-channel alerts (Slack, Email)
+
+📌 Use Cases
+
+E-commerce stores
+
+Restaurants & delivery services
+
+Dropshipping businesses
+
+Small & medium online retailers
+
+
+
