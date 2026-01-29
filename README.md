@@ -68,7 +68,8 @@ Items: 2× Blue Shirt, 1× Chinos
 
 Create a `.env` file:
 
-```env
+env
+
 WHATSAPP_TOKEN=your_whatsapp_cloud_api_token
 PHONE_NUMBER_ID=your_phone_number_id
 ADMIN_PHONE=admin_phone_number_with_country_code
@@ -76,7 +77,8 @@ VERIFY_TOKEN=your_webhook_verify_token
 
 ## ▶️ Run Locally
 
-```bash
+bash
+
 pip install -r requirements.txt
 uvicorn main:app --reload
 
